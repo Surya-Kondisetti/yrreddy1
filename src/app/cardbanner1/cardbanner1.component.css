@@ -1,0 +1,386 @@
+.hero {
+  background-image: url("../../assets/Maskgroup.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 90vh;
+  max-width: 100%;
+  margin: 20px 20px;
+  border-radius: 30px;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.hero-section {
+  padding: 8% 0 0 9.05%;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-family: "Albert Sans", sans-serif;
+  font-weight: bold;
+}
+
+.hero-section p {
+  max-width: 55%;
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+.card {
+  border: none;
+  background: transparent;
+  top: -79%;
+  box-shadow: 0.5px 0.5px 10px #1e1e1e;
+}
+.card h1 {
+  padding: 50px;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Albert Sans", sans-serif;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.card:hover h1 {
+  color: #111;
+  z-index: 1;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(12, 12, 12, 0.1),
+    rgba(51, 51, 51, 0.4),
+    rgba(255, 255, 255, 0.8)
+  );
+  opacity: 0;
+  border-radius: 40px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover::after {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.row {
+  margin: 10px 20px;
+}
+
+.user1 {
+  background-image: url("../../assets/places/villas.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 51vh;
+  border-radius: 40px;
+}
+
+.user2 {
+  background-image: url("../../assets/places/guesthouse.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 51vh;
+  border-radius: 40px;
+}
+
+.user3 {
+  background-image: url("../../assets/places/apartement.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 51vh;
+  border-radius: 40px;
+}
+
+.user4 {
+  background-image: url("../../assets/places/landscapepool.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 51vh;
+  border-radius: 40px;
+}
+
+.commercial1 {
+  background-image: url("../../assets/places/office.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 51vh;
+  border-radius: 40px;
+}
+
+.commercial2 {
+  background-image: url("../../assets/places/factories.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 51vh;
+  border-radius: 40px;
+}
+
+.commercial3 {
+  background-image: url("../../assets/places/schools.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 51vh;
+  border-radius: 40px;
+}
+
+.commercial4 {
+  background-image: url("../../assets/places/hotels1.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 51vh;
+  border-radius: 40px;
+}
+
+.commercial5 {
+  background-image: url("../../assets/places/office.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 51vh;
+  border-radius: 40px;
+}
+
+.card h1 {
+  padding: 50px;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Albert Sans", sans-serif;
+}
+
+button {
+  color: #111;
+  border: none;
+  background-color: #fff;
+  font-size: 2.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  margin: 20% 0% 10% 0%;
+  width: 250px;
+  height: 60px;
+}
+
+button i {
+  padding: 0px 0 0px 80px;
+  font-size: 2rem;
+}
+
+.buttons1 {
+  margin: 40px 35% 0 35%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  display: flex;
+  width: 300px;
+  height: 60px;
+  background-color: #333;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.3s;
+  filter: drop-shadow(0.5px 0.5px 1px #fff);
+}
+
+input:checked+label {
+  background-color: #333;
+  color: #fff;
+}
+
+label::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 140px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 25px;
+  transition: 0.3s;
+  border: 2px solid #111;
+}
+
+input:checked+label::before {
+  left: calc(100% - 145px);
+}
+
+.left-text,
+.right-text {
+  z-index: 1;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+input:checked+label .left-text {
+  color: #fff;
+}
+
+input:not(:checked)+label .right-text {
+  color: #fff;
+}
+
+input:checked+label .right-text {
+  color: #111;
+}
+
+input:not(:checked)+label .left-text {
+  color: #111;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.navigation button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  background-color: #444;
+}
+
+.card .buttons button {
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .buttons button {
+  display: block;
+  opacity: 1;
+}
+
+.users4 {
+  display: flex;
+  margin-top: -35%;
+  margin-left: 30%;
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .hero-section {
+    padding: 5% 5%;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-section p {
+    max-width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .buttons1 {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .row {
+    margin: 10px;
+  }
+
+  .card {
+    top: -60%;
+  }
+
+  .card h1 {
+    padding: 30px;
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 200px;
+    font-size: 1.2rem;
+    height: 50px;
+    margin: 30% 5% 0px 5%;
+  }
+
+  .users4 {
+    margin: -76px 10px 37px 10px;
+    justify-content: center;
+  }
+}
+
+/* Media Query for very small screens (e.g., mobile) */
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 0.8rem;
+    padding-top: 5px;
+  }
+
+  .card h1 {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+
+  button {
+    width: 180px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .buttons1 {
+    margin: 20px auto;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .navigation button {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
+

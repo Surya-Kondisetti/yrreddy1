@@ -1,0 +1,134 @@
+section {
+  background-color: #092A5E;
+  height: 70vh;
+  margin: 20px 20px;
+  border-radius: 30px;
+  color: #fff;
+  display: flex;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.specialist-details {
+  padding: 8rem 0 0 10rem;
+}
+
+.specialist-details .buttons {
+  display: flex;
+}
+
+.specialist-details .queries {
+  display: flex;
+}
+
+.specialist-details h1 {
+  font-size: 5rem;
+  text-wrap: nowrap;
+  padding-bottom: 1.8rem;
+}
+
+.specialist-details p {
+  color: #A0C2FF;
+  font-size: 0.9rem;
+  text-wrap: nowrap;
+}
+
+.specialist-images {
+  margin-top: -4%;
+  margin-left: -20%;
+
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+  padding: 10px 20px;
+  margin: 20px 20px 20px 0;
+  border-radius: 10px;
+}
+
+.queries h3 {
+  padding: 0 4px 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .specialist-details {
+    padding: 2rem 2rem 0 2rem;
+    text-align: center;
+  }
+
+  .specialist-details h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .specialist-details p {
+    font-size: 0.8rem;
+  }
+
+  .specialist-details .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .specialist-details .buttons button {
+    margin: 10px 0;
+    padding: 10px 15px;
+  }
+
+  .specialist-details .queries {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .specialist-images {
+    margin: 20px 0;
+  }
+
+  .specialist-images img {
+    width: 80%;
+    /* Ensure image scales down */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .specialist-details {
+    padding: 1rem;
+  }
+
+  .specialist-details h1 {
+    font-size: 2.5rem;
+  }
+
+  .specialist-details p {
+    font-size: 0.7rem;
+  }
+
+  .specialist-details .buttons button {
+    padding: 8px 12px;
+  }
+
+  .specialist-images img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .queries h3 {
+    font-size: 0.9rem;
+  }
+}

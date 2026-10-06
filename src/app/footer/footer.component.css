@@ -1,0 +1,92 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 0 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 70px auto;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #002855;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer-column a {
+  color: #6d6d6d;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+  color: #002855;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-top: -8%;
+  margin-left: 17%;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+
+}
+
+/* Existing CSS remains the same above this line */
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    margin: 20px 0 0 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 100px; /* Adjust logo size for smaller screens */
+  }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px 0;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+}

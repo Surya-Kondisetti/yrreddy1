@@ -1,0 +1,281 @@
+/* Title styling */
+section .title {
+  padding: 7% 10% 0 10%;
+  font-size: 3.5rem;
+  color: #092A5E;
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 600;
+  max-width: 600px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.user-card {
+  margin-top: 1rem;
+  /* Reduce top margin between cards */
+}
+
+.card {
+  background-color: transparent;
+  margin-bottom: 1rem;
+  margin-left: -50px;
+}
+
+.card {
+  max-width: 542px;
+  margin: 40px 0px 0 0;
+}
+
+.card-image {
+  border-radius: 10px;
+  height: 350px;
+  /* Adjust image height */
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+}
+
+.card-details h1 {
+  font-size: 1.6rem;
+  /* Font size */
+  color: #092A5E;
+  font-weight: 600;
+  line-height: 30px;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.card-details h3 {
+  font-size: 1rem;
+  color: #092A5E;
+  font-weight: 500;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.card-details p {
+  font-size: 0.8rem;
+  color: #7A8DA1;
+  line-height: 1.4;
+  font-family: "Albert Sans", sans-serif;
+  max-width: 260px;
+  text-align: center;
+}
+
+/* Map styling */
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1rem;
+  /* Adjust spacing between cards and map */
+}
+
+.india-map {
+  max-width: 868px;
+  height: auto;
+  opacity: 0.8;
+  margin: -15% 0 0 -41%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section .title {
+    font-size: 2.2rem;
+    padding: 10% 5% 0 5%;
+    line-height: 45px;
+  }
+
+  .card-image {
+    height: 200px;
+    max-width: 250px;
+  }
+
+  .card-details h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .card-details h3 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .card-details p {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .map-container {
+    margin-top: 1rem;
+  }
+
+  .india-map {
+    max-width: 200px;
+    /* Adjusted for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  section .title {
+    font-size: 1.8rem;
+    padding: 15% 5% 0 5%;
+    line-height: 40px;
+  }
+
+  .card-image {
+    height: 150px;
+    max-width: 200px;
+  }
+
+  .card-details h1 {
+    font-size: 1.2rem;
+  }
+
+  .card-details h3 {
+    font-size: 0.8rem;
+  }
+
+  .card-details p {
+    font-size: 0.6rem;
+  }
+
+  .india-map {
+    max-width: 100%;
+  }
+}
+
+section {
+  margin: 40px 0 ;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card-image {
+    height: 220px;
+    max-width: 280px;
+  }
+
+  .card-details h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-details h3 {
+    font-size: 0.9rem;
+  }
+
+  .card-details p {
+    font-size: 0.75rem;
+  }
+
+  .india-map {
+    max-width: 100%;
+    margin: 0; /* Center map on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  section .title {
+    font-size: 2.2rem;
+    padding: 10% 5% 0 5%;
+    line-height: 45px;
+  }
+
+  .card {
+    max-width: 90%;
+    margin: 0px;
+    align-items: center;
+
+  }
+
+  .card-image {
+    height: 200px;
+    max-width: 250px;
+  }
+
+  .card-details h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .card-details h3 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .card-details p {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .map-container {
+    margin-top: 1rem;
+  }
+
+  .india-map {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem; /* Position map below the cards */
+  }
+}
+
+@media (max-width: 480px) {
+  section .title {
+    font-size: 1.8rem;
+    padding: 15% 5% 0 5%;
+    line-height: 40px;
+  }
+
+  .user-card {
+    margin-bottom: 1rem;
+  }
+
+  .card-image {
+    height: 150px;
+    max-width: 200px;
+  }
+
+  .card-details h1 {
+    font-size: 1.2rem;
+  }
+
+  .card-details h3 {
+    font-size: 0.8rem;
+  }
+
+  .card-details p {
+    font-size: 0.6rem;
+  }
+
+  .india-map {
+    max-width: 100%;
+    margin: 0 auto; /* Center map on very small screens */
+  }
+}
+
+@media (max-width: 360px) {
+  section .title {
+    font-size: 1.5rem;
+    padding: 20% 5% 0 5%;
+    line-height: 35px;
+  }
+
+  .card-image {
+    height: 130px;
+    max-width: 180px;
+  }
+
+  .card-details h1 {
+    font-size: 1rem;
+  }
+
+  .card-details h3 {
+    font-size: 0.7rem;
+  }
+
+  .card-details p {
+    font-size: 0.5rem;
+  }
+
+  .india-map {
+    max-width: 100%;
+  }
+}

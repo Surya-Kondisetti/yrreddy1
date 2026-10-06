@@ -1,0 +1,19 @@
+<section>
+  <div class="medical-title">
+    <h1>Labs</h1>
+    <img src="../../assets/clients/Vector 5.png" alt="" class="logo">
+  </div>
+
+  <div class="cards">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col" *ngFor="let i of categories">
+          <div class="card">
+              <img [src]="i.image" [alt]="i.name">
+              <h1>{{ i.name }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

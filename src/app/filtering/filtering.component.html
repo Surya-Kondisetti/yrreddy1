@@ -1,0 +1,79 @@
+<section>
+  <div class="cards-continers">
+    <div class="title">
+      <h1>Home <span>> </span>Products <span>> </span><span>{{ selectedCategory }}</span></h1>
+    </div>
+
+    <div class="search-container">
+      <i class="fas fa-search"></i>
+      <input [(ngModel)]="searchQuery" (keyup)="filterProducts()" type="search" placeholder="Search for Medical Equipment" class="search-input">
+      <button class="search-button">Search</button>
+    </div>
+  </div>
+</section>
+
+<div class="slideuser">
+  <div class="sidebar">
+    <h3>Category</h3>
+    <ul>
+      <li (click)="onCategorySelect('All Products')" [class.active]="selectedCategory === 'All Products'"
+        class="allproducts">
+        <img src="../../assets/medical/Group 35454.svg" alt=""> All Products
+      </li>
+      <li *ngFor="let category of categories" (click)="onCategorySelect(category.name)"
+        [class.active]="selectedCategory === category.name" class="uniqueproduct">
+        <img src="../../assets/medical/Group 35455.svg" alt=""> {{ category.name }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="product-grid">
+    <div *ngFor="let product of filteredProducts" class="product-card">
+      <div class="image-wrapper">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <div class="hover-content">
+          <h2>{{ product.name }}</h2>
+          <button type="button" class="btn users" data-bs-toggle="modal" data-bs-target="#exampleModal" >Contact Us</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="filteredProducts.length === 0" class="no-results">
+      <p>No products found matching your search.</p>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send Feedback</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="emailInput">Your Email</label>
+          <input
+            type="email"
+            id="emailInput"
+            class="form-control"
+            [(ngModel)]="senderEmail"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="form-group mt-3">
+          <label for="feedbackInput">Your Feedback</label>
+          <textarea
+            id="feedbackInput"
+            class="form-control"
+            [(ngModel)]="feedbackMessage"
+            placeholder="Enter your feedback"
+          ></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="sendFeedback()">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

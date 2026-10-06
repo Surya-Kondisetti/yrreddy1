@@ -1,0 +1,21 @@
+<section>
+  <div class="medical-title">
+    <h1>Medical</h1>
+    <img src="../../assets/clients/Vector 5.png" alt="logo" class="logo">
+  </div>
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <!-- Display only visible cards based on the current index -->
+      <div class="col" *ngFor="let category of getVisibleCards()">
+        <div class="card" (click)="onCategorySelect(category.name)">
+          <img [src]="category.image" [alt]="category.name" class="card-image">
+          <div class="hover-content">
+            <h1 class="card-title">{{ category.name }}</h1>
+            <button class="arrow-button">Explore Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

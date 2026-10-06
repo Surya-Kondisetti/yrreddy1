@@ -1,0 +1,101 @@
+/* Title styling */
+section .title {
+  padding: 7% 10% 0 10%;
+  font-size: 3.5rem;
+  color: #092A5E;
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 600;
+  max-width: 600px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin: 0px 40%;
+
+}
+
+img{
+  width: 1200px;
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section .title {
+    font-size: 2.2rem;
+    padding: 10% 5% 0 5%;
+    line-height: 45px;
+  }
+
+  .card-image {
+    height: 200px;
+    max-width: 250px;
+  }
+
+  .card-details h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .card-details h3 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .card-details p {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .map-container {
+    margin-top: 1rem;
+  }
+
+  .india-map {
+    max-width: 200px;
+    /* Adjusted for smaller screens */
+  }
+  .col-md-4{
+    margin: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  section .title {
+    font-size: 1.8rem;
+    padding: 15% 5% 0 5%;
+    line-height: 40px;
+  }
+
+  .card-image {
+    height: 150px;
+    max-width: 200px;
+  }
+
+  .card-details h1 {
+    font-size: 1.2rem;
+  }
+
+  .card-details h3 {
+    font-size: 0.8rem;
+  }
+
+  .card-details p {
+    font-size: 0.6rem;
+  }
+
+  .india-map {
+    max-width: 180px;
+  }
+  .col-md-4{
+    margin: 0px;
+  }
+}
+
+section {
+  margin: 40px 0 ;
+}

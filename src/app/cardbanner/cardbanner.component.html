@@ -1,0 +1,44 @@
+<section>
+  <div class="hero">
+    <div class="hero-section">
+      <h1>We spend one-third of our life at work</h1>
+      <p>Our open, positive, and proactive approach helps us find ways to align your work environment
+        with the culture and attitude you and your team aspire to and want to project.</p>
+
+      <div class="buttons1">
+        <input type="checkbox" id="switch" (change)="toggleCategory($event)" />
+        <label for="switch">
+          <span class="left-text">Commercial</span>
+          <span class="right-text">Residential</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <!-- Display only visible cards based on the current index -->
+      <div class="col" *ngFor="let card of getVisibleCards(); let i = index">
+        <div class="card" [ngClass]="card.class">
+          <h1>{{ card.title }}</h1>
+          <div class="buttons">
+            <!-- <button *ngIf="card.showExplore">{{ card.button }} <i class="fa-solid fa-arrow-right"></i></button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="users4">
+      <button class="arrow left-arrow" (click)="prev()" [disabled]="isPrevDisabled()">←</button>
+      <div class="scroll-bar-container">
+        <div class="scroll-bar-track">
+          <div
+            class="scroll-bar-thumb"
+            [ngStyle]="{ left: (currentIndex / (getCurrentCards().length - 4)) * 100 + '%' }"
+            (mousedown)="startDrag()"
+          ></div>
+        </div>
+      </div>
+      <button class="arrow right-arrow" (click)="next()" [disabled]="isNextDisabled()">→</button>
+    </div>
+  </div>
+</section>

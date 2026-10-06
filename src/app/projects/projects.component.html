@@ -1,0 +1,31 @@
+<section>
+  <div class="users">
+    <div class="gallery">
+      <h1>Our Project</h1>
+      <h1>Gallery</h1>
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div *ngFor="let image of galleryImages.slice(currentIndex, currentIndex + 3); let i = index"
+        class="col-md-4 card-container">
+        <div class="card">
+          <img [src]="image.src" alt="Project Image">
+          <div class="overlay">
+            <h2>{{ image.title }}</h2>
+          </div>
+
+          <button *ngIf="i === 0" class="arrow left-arrow" (click)="prev()" [disabled]="isPrevDisabled()">←</button>
+
+
+          <button *ngIf="i === 2" class="arrow right-arrow" (click)="next()" [disabled]="isNextDisabled()">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
